@@ -9,7 +9,7 @@ export default function Home() {
         href="/blog"
         className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-200 transition"
       >
-        Read my blog
+        blog
       </Link>
     </main>
   );
