@@ -4,4 +4,4 @@ date: "2024-06-28"
 description: "My first blog post!"
 ---
 
-Welcome to your new blog! This is your first post written in Markdown. 
+Hi guys! Thanks for joining me. This is how I'll start recording my journey into Computing Science and more fun projects. Stay tuned.
