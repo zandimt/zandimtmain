@@ -1,7 +1,7 @@
 ---
-title: "Hello World"
+title: "hello world."
 date: "2024-06-28"
-description: "My first blog post!"
+description: "first post!"
 ---
 
-Hi guys! Thanks for joining me. This is how I'll start recording my journey into Computing Science and more fun projects. Stay tuned.
+hi guys! thanks for joining me. this is how i'll start recording my journey into computing science and more fun projects. stay tuned.
