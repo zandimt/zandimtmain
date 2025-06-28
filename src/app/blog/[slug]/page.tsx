@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   };
 }
 
-export default function BlogPostPage({ params }: any) {
-  const slug = params.slug;
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
   const safeSlug = slug.replace(/\.md$/, "");
   const filePath = path.join(process.cwd(), "src/content/blog", `${safeSlug}.md`);
   const source = fs.readFileSync(filePath, "utf8");
