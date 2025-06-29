@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Custom Color Palette */
+  --dark-purple: #160f29;
+  --caribbean-current: #246a73;
+  --dark-cyan: #368f8b;
+  --champagne: #f3dfc1;
+  --desert-sand: #ddbea8;
+  
+  /* Default theme colors */
+  --background: var(--champagne);
+  --foreground: var(--dark-purple);
 }
 
 @theme inline {
@@ -14,8 +22,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--dark-purple);
+    --foreground: var(--champagne);
   }
 }
 
