@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'dark-purple': 'var(--dark-purple)',
+        'caribbean-current': 'var(--caribbean-current)',
+        'dark-cyan': 'var(--dark-cyan)',
+        'champagne': 'var(--champagne)',
+        'desert-sand': 'var(--desert-sand)',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
