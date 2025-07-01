@@ -9,6 +9,22 @@ interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
 }
 
+function TagList({ tags }: { tags?: string[] }) {
+  if (!tags || tags.length === 0) return null;
+  return (
+    <div className="flex flex-wrap gap-2 mb-4">
+      {tags.map((tag) => (
+        <span
+          key={tag}
+          className="px-2 py-0.5 rounded-full bg-caribbean-current text-champagne text-xs font-semibold tracking-wide border border-champagne"
+        >
+          #{tag}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const safeSlug = slug.replace(/\.md$/, "");
@@ -37,6 +53,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </Link>
       </div>
       <h1 className="text-3xl font-bold mb-2 text-dark-purple dark:text-champagne">{data.title}</h1>
+      <TagList tags={data.tags} />
       <div className="text-sm text-dark-cyan dark:text-desert-sand mb-8">{data.date}</div>
       <article className="prose prose-dark-cyan dark:prose-champagne max-w-none">
         <MDXRemote source={content} />

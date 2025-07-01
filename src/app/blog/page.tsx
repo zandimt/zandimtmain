@@ -2,12 +2,14 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
+import BlogClient from "./BlogClient";
 
 interface PostMeta {
   title: string;
   date: string;
   description: string;
   slug: string;
+  tags?: string[];
 }
 
 function getPosts(): PostMeta[] {
@@ -22,7 +24,8 @@ function getPosts(): PostMeta[] {
         title: data.title || file,
         date: data.date || "",
         description: data.description || "",
-        slug: file.replace(/\\.md$/, ""),
+        slug: file.replace(/\.md$/, ""),
+        tags: data.tags || [],
       };
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -41,20 +44,7 @@ export default function BlogPage() {
           ← return
         </Link>
       </div>
-      <ul className="space-y-6">
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <Link
-              href={`/blog/${post.slug}`}
-              className="block group border-l-2 border-transparent hover:border-caribbean-current dark:hover:border-dark-cyan pl-4 transition-colors"
-            >
-              <div className="text-xl font-semibold group-hover:underline mb-1 text-dark-purple dark:text-champagne">{post.title}</div>
-              <div className="text-sm text-dark-cyan dark:text-desert-sand mb-1">{post.date}</div>
-              <div className="text-base text-dark-cyan dark:text-desert-sand">{post.description}</div>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <BlogClient posts={posts} />
     </main>
   );
 } 
