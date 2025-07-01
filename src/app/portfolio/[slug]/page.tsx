@@ -25,7 +25,7 @@ function TagList({ tags }: { tags?: string[] }) {
   );
 }
 
-export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const filePath = path.join(process.cwd(), "src/content/projects", `${params.slug}.md`);
   const { data } = matter(fs.readFileSync(filePath, "utf8"));
   return {
