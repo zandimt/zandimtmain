@@ -11,6 +11,13 @@
   /* Default theme colors */
   --background: var(--champagne);
   --foreground: var(--dark-purple);
+  --shadow-color: rgba(0,0,0,0.15); /* default shadow for light mode */
+}
+
+html.dark {
+  --background: var(--dark-purple);
+  --foreground: var(--champagne);
+  --shadow-color: #f3dfc1; /* champagne for dark mode */
 }
 
 @theme inline {
@@ -20,15 +27,19 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--dark-purple);
-    --foreground: var(--champagne);
-  }
+.shadow-custom {
+  box-shadow: 0 4px 24px 0 var(--shadow-color);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes spin-slow {
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 0.4s linear;
 }
