@@ -5,10 +5,6 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import type { Metadata } from "next";
 import Link from "next/link";
 
-interface BlogPostPageProps {
-  params: Promise<{ slug: string }>;
-}
-
 function TagList({ tags }: { tags?: string[] }) {
   if (!tags || tags.length === 0) return null;
   return (
@@ -25,7 +21,7 @@ function TagList({ tags }: { tags?: string[] }) {
   );
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const safeSlug = slug.replace(/\.md$/, "");
   const filePath = path.join(process.cwd(), "src/content/blog", `${safeSlug}.md`);
@@ -36,7 +32,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   };
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const safeSlug = slug.replace(/\.md$/, "");
   const filePath = path.join(process.cwd(), "src/content/blog", `${safeSlug}.md`);

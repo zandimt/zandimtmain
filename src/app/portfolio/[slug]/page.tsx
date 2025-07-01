@@ -5,10 +5,6 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import type { Metadata } from "next";
 import Link from "next/link";
 
-interface ProjectPageProps {
-  params: { slug: string };
-}
-
 function TagList({ tags }: { tags?: string[] }) {
   if (!tags || tags.length === 0) return null;
   return (
@@ -25,8 +21,9 @@ function TagList({ tags }: { tags?: string[] }) {
   );
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const filePath = path.join(process.cwd(), "src/content/projects", `${params.slug}.md`);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const filePath = path.join(process.cwd(), "src/content/projects", `${slug}.md`);
   const { data } = matter(fs.readFileSync(filePath, "utf8"));
   return {
     title: data.title,
@@ -34,8 +31,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const filePath = path.join(process.cwd(), "src/content/projects", `${params.slug}.md`);
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const filePath = path.join(process.cwd(), "src/content/projects", `${slug}.md`);
   const source = fs.readFileSync(filePath, "utf8");
   const { content, data } = matter(source);
   return (
