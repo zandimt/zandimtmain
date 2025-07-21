@@ -15,7 +15,7 @@ i decided to try my luck with the 3 main languages in the area, namely korean, j
 very likely that i spent the most time learning it out of any other language i've studied so far (not counting english). i tried studying japanese, and while it's easy from
 a phonetic point of view, the fact that it has 3 alphabets put me off to some degree, so i quickly stopped studying it.
 
-<br>
+
 now, when it comes to mandarin chinese, i didn't study it for too long either, as i only managed to learn around 40-50 characters at the time. that being said, even when i stopped
 studying, i planted a seed in my mind that would say "you should learn mandarin at some point, even if it's not right now". as at the time i was finishing up middle school
 and focused on getting a good grade on the exams, i pushed it aside for another time, which is now.
@@ -27,7 +27,7 @@ hidden from the world a gem of a culture and language. it might sound odd, as ma
 misconceptions that people have had for years of the country, the culture and the language. i believe that this up-and-coming economic power from china will show the world
 what it is truly capable of in terms of infrastructure, technology, and culture, and i want to make sure that i'm one of the people that can be there to witness it.
 
-<br>
+
 what pushed me towards learning mandarin chinese was also the fact that my tiktok fyp has been absolutely filled to the brim with content about china and, more specifically,
 chongqing. while i've never visited, it's a gorgeous city from what i've seen online, and one day i'd love to explore it and enjoy all it's aspects. because of that, i refuse
 to visit it without speaking a decent level of mandarin, as i'm a true believer that visiting a country = learning the language.
@@ -40,5 +40,5 @@ of having a purpose for learning a new language besides just "i want to learn it
 me stay on track with my studies. besides this, mandarin chinese is not the only language that i'm studying at the moment, as i'm looking to get a B1 in dutch in the next couple of
 months so i can strengthen my job prospects here in the netherlands.
 
-<br>
+
 stay tuned to find out my progress, and who knows, in a few months' time you'll have heard from me that i passed one of the HSK exams :P
