@@ -78,6 +78,12 @@ export default function Home() {
             >
               portfolio
             </Link>
+            <Link
+              href="/contact"
+              className="text-caribbean-current dark:text-champagne underline hover:text-dark-cyan dark:hover:text-desert-sand transition"
+            >
+              contact
+            </Link>
           </div>
       </div>
     </main>
