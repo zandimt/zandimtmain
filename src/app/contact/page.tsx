@@ -37,7 +37,7 @@ export default function ContactPage() {
             <h3 className="text-lg font-semibold text-dark-purple dark:text-champagne mb-2">social media</h3>
             <div className="flex flex-col space-y-2">
               <a 
-                href="https://linkedin.com/in/yourprofile" 
+                href="https://www.linkedin.com/in/andimtoader/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-caribbean-current dark:text-dark-cyan underline hover:text-dark-purple dark:hover:text-champagne transition"
@@ -45,7 +45,7 @@ export default function ContactPage() {
                 linkedin
               </a>
               <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/zandimt" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-caribbean-current dark:text-dark-cyan underline hover:text-dark-purple dark:hover:text-champagne transition"
